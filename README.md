@@ -21,6 +21,12 @@ Within minecraft, there's a lot to say.  You might just want to find my [sister 
   * Then you need to run this project to monitor Redis to push it to statsd.
 
 
+### Setting up this project
+
+* `cp .env.sample .env`  (change hostnames etc in there)
+* run `rake` in tmux or in the background while you play minecraft
+
+
 ## Questions
 
 Perhaps pushing straight to statsd would be better.  Maybe this project will move to that.  I kind of like pushing to Redis though because then you don't have to think about time gaps (maybe).  This project could potentially just push straight to influxdb.  I'm just worried that the value of statsd will be minimal with the time averaging because noone's minecraft game is running 24/7.  So will there be massive gaps in data that cause weird averaging?
