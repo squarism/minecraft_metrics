@@ -21,8 +21,10 @@ twitter and I can make a video.  Here's a quick rundown.
   * It needs to have an "Internet Card" installed in it so it can talk with the outside world.
   * OpenComputers.cfg needs to be modified to un-blacklist whatever Redis server you intend to push data to.
   * Whatever thing you are monitoring needs to have a connection to your (minecraft) computer.  For example, the canonical example is monitoring a nuclear reactor.  `components` should show `br_reactor`.  This is all opencomputers stuff.  They have an excellent youtube video tutorial series.
+  * You need my redis client for opencomputers: [opencomputers_redis](https://github.com/squarism/opencomputers_redis)
   * Then you need to fire up the `monitor.lua` monitoring script to push data to Redis.  Copy `monitor.lua` to `/usr/bin` or wherever you want.  Unforunately, it doesn't run as a daemon yet.
   * Then you need to run this project to monitor Redis to push it to statsd.
+
 
 
 ### Setting up this project
