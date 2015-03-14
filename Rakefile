@@ -17,10 +17,15 @@ task :monitor do
           push hash[:fuel], as: 'reactor.fuel'
         end
 
+        monitor.find("biogen") do |hash|
+          push hash[:extra_fuel], as: 'bio_generator.extra_fuel'
+          push hash[:energy_stored], as: 'bio_generator.energy_stored'
+        end
+
         sleep 1
       end
     rescue Exception
-      # this will never fire
+      # this will never fire, this madness is for clean ctrl-c running
     end
   end
 
