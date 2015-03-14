@@ -6,6 +6,7 @@ task :monitor do
   trap("SIGINT") { throw :ctrl_c }
 
   catch :ctrl_c do
+    puts "Pushing redis to statsd..."
     begin
       while true do
 
